@@ -8,9 +8,6 @@ test.beforeEach(async({page})=>{
      lp=new BankLogin(page)
    await lp.launchbrowser(loginBankData.url)
 })
-
-
-
 test('login with valid data @smoke', async ({page})=>{
    await lp.loginApplication(loginBankData.username,loginBankData.vpassword)
    await expect(lp.homepageIdentifier).toBeVisible()
@@ -115,3 +112,4 @@ test.skip('account lock after multiple failed attempts (manual/optional)', async
    expect(err && /locked|temporarily blocked/i.test(err)).toBeTruthy()
 })
 //test.todo('captcha flow - typically not automated')
+//Created by me

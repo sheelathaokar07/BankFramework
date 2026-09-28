@@ -1,0 +1,8 @@
+{
+ "url": "https://qaplayground.com/bank/login",
+ "username": "standard_user",
+ "vpassword": "bank_sauce",
+ "Password": "Vivaan@1234",
+ "errorMessage": "The username or password you entered is incorrect.",
+ "homepageIdentifier":"Welcome back, "
+}

@@ -1,5 +1,55 @@
 {
-"higherMoney":"6000",
-"correctMoney":"1000",
-"note":"expenses"
+  "higherMoney": "6000",
+  "correctMoney": "1000",
+  "note": "expenses",
+  "duplicateCheckNote": "duplicate check",
+  "minimumAmount": "1",
+  "decimalAmount": "1.50",
+  "duplicateAmount": "25",
+  "validRecipient": "1234567890",
+  "validPayeeIndex": 2,
+  "secondaryPayeeIndex": 1,
+  "invalidRecipientCases": [
+    "123",
+    "ABC123",
+    "12@#$"
+  ],
+  "invalidAmountCases": [
+    "abc",
+    "!@#",
+    "-100",
+    "0",
+    "0.0000001",
+    "6000000000",
+    "999999999999999999999"
+  ],
+  "spaceCases": [
+    " 1234567890 ",
+    " 100 "
+  ],
+  "securityPayloads": [
+    "<script>alert(1)</script>",
+    "'; DROP TABLE users; --",
+    "1 OR 1=1"
+  ],
+  "validationSelector": "[role=\"alert\"], [data-testid=\"send-money-error\"],.error, [data-testid=\"validation-message\"], .toast-message, .validation-message",
+  "transactionPattern": "TRX|REF|TXN",
+  "confirmTextPattern": "review.*send|confirm.*send|confirm.*transfer",
+  "notes": {
+    "invalidRecipient": "invalid recipient",
+    "alphaAccount": "alpha account",
+    "specialAccount": "special account",
+    "alphaAmount": "alpha amount",
+    "specialAmount": "special amount",
+    "negativeAmount": "negative amount",
+    "zeroAmount": "zero amount",
+    "tooManyDecimals": "too many decimals",
+    "spacesAccount": "spaces account",
+    "spacesAmount": "spaces amount",
+    "tooHigh": "too high",
+    "veryLargeNumber": "very large number",
+    "minimumAmountNote": "minimum amount",
+    "decimalTransferNote": "decimal transfer",
+    "higherAmountFailure": "higher amount should fail"
+  }
 }

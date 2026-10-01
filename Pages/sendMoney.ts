@@ -12,15 +12,18 @@ export class sendMoney
   note:Locator
   selectPayee:Locator
   sendButton:Locator
-
+  SendMoneyTitle:Locator
   confirmDialog:Locator
   errorForHigherAmt:Locator
   successMessage:Locator
+
+  moneyError:Locator
 
   constructor(page:Page)
       {
           this.page=page        
           this.sendMoney=this.page.locator('[data-nav="send-money"]')
+          this.SendMoneyTitle=this.page.locator('[data-testid="send-money-page-title"]')
           this.fromAccount=this.page.locator('#send-from-trigger')
           this.payee=this.page.locator('#payee-select-trigger')
           this.amount=this.page.locator('#send-amount')
@@ -32,6 +35,7 @@ export class sendMoney
           this.confirmDialog=this.page.getByText('Confirm & Send')
           this.errorForHigherAmt=this.page.getByText('Insufficient funds. Available balance: $4,250.00.')
           this.successMessage=this.page.getByText('Money Sent Successfully')
+          this.moneyError=this.page.locator('[data-testid="send-money-error"]')
       }
 
       async sendMoneyToPayee()
